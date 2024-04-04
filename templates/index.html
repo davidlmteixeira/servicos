@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Home</h1>
+
+        <form action="{{ url_for('search') }}" method="get" class="search-form">
+            <input type="text" name="search_query" placeholder="Search..." class="search-input">
+            <button type="submit" class="search-button">Search</button>
+        </form>
+        
+        <h2 class="titulo-cadastro">Cadastro de Serviços</h2>
+
+        <form action="{{ url_for('add') }}" method="post" class="cadastro-form">
+            <div class="cadastro-inputs">
+                <input type="text" name="data" placeholder="Data" class="cadastro-input">
+                <input type="text" name="placa" placeholder="Placa" class="cadastro-input">
+                <input type="text" name="description" placeholder="Descrição" class="cadastro-input">
+            </div>
+            <button type="submit" class="cadastrar-button">Cadastrar</button>
+        </form>
+        
+        <!-- Resultados da busca -->
+        <ul class="service-list">
+            {% for service in search_results %}
+                <li class="service-item">
+                    <span class="service-data">{{ service[1] }}</span>
+                    <span class="service-placa">{{ service[2] }}</span>
+                    <span class="service-description">{{ service[3] }}</span>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,155 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Estilos para o formulário de pesquisa */
+.search-form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 60%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.search-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para a lista de serviços */
+.service-list {
+    margin-top: 20px;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.service-item:last-child {
+    border-bottom: none;
+}
+
+.service-item span {
+    flex: 1;
+}
+
+.service-data, .service-placa, .service-description {
+    display: block;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+}
+
+/* Botão Cadastrar */
+.cadastrar-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cadastrar-button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para layout responsivo */
+@media screen and (max-width: 768px) {
+    .search-input, .service-placa, .service-description {
+        width: calc(100% - 20px);        
+    }
+}
+
+/* Adicione estas regras CSS ao seu arquivo styles.css */
+
+/* Estilos para o formulário de cadastro */
+.cadastro-form {
+    text-align: center;
+}
+
+.cadastro-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cadastro-input {
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.cadastrar-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cadastrar-button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para layout responsivo */
+@media screen and (max-width: 768px) {
+    .cadastro-input {
+        width: calc(100% - 20px);        
+    }
+}
